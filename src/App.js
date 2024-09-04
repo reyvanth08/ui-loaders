@@ -1,10 +1,8 @@
 /* eslint-disable react/jsx-no-comment-textnodes */
 import React, { useState, useEffect } from "react";
 import "./App.css";
-// import { CircleLoader, PulseLoader, SpinnerLoader, DotLoader, FullScreenLoader, RingLoader, WaveLoader } from "./loaders";
-import { CircleLoader, PulseLoader, SpinnerLoader, DotLoader, FullScreenLoader, RingLoader, WaveLoader } from "react-ui-loaders";
-// import { CircleLoader, PulseLoader, SpinnerLoader, DotLoader, FullScreenLoader } from 'react-loaders-ui';
-import { FaChevronDown } from 'react-icons/fa'; // Make sure to install react-icons if you haven't already
+import { CircleLoader, PulseLoader, SpinnerLoader, DotLoader, FullScreenLoader, RingLoader, WaveLoader } from "./loaders";
+import { FaChevronDown } from 'react-icons/fa';
 
 function App() {
     const [activeLoader, setActiveLoader] = useState("circle");
