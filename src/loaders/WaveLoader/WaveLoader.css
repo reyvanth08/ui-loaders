@@ -1,0 +1,20 @@
+.wave-loader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.wave {
+  width: 15%;
+  height: 100%;
+  animation: wave 1s ease-in-out infinite;
+}
+
+@keyframes wave {
+  0%, 100% {
+    transform: scaleY(0.2);
+  }
+  50% {
+    transform: scaleY(1);
+  }
+}
