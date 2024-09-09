@@ -1,0 +1,57 @@
+.orbit-loader {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  width: 20%;
+  height: 20%;
+  border-radius: 50%;
+  background-color: #61dafb;
+}
+
+.orbit {
+  position: absolute;
+  border: 1px solid rgba(97, 218, 251, 0.2);
+  border-radius: 50%;
+  animation: orbit linear infinite;
+}
+
+.orbit1 {
+  width: 50%;
+  height: 50%;
+  animation-duration: 3s;
+}
+
+.orbit2 {
+  width: 70%;
+  height: 70%;
+  animation-duration: 5s;
+}
+
+.orbit3 {
+  width: 90%;
+  height: 90%;
+  animation-duration: 7s;
+}
+
+.planet {
+  position: absolute;
+  top: -5%;
+  left: 45%;
+  width: 10%;
+  height: 10%;
+  border-radius: 50%;
+  background-color: #61dafb;
+}
+
+@keyframes orbit {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

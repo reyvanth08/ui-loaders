@@ -6,6 +6,11 @@ import SpinnerLoader from '../SpinnerLoader/SpinnerLoader';
 import DotLoader from '../DotLoader/DotLoader';
 import RingLoader from '../RingLoader/RingLoader';
 import WaveLoader from '../WaveLoader/WaveLoader';
+import BounceLoader from '../BounceLoader/BounceLoader';
+import SquareLoader from '../SquareLoader/SquareLoader';
+import HeartbeatLoader from '../HeartbeatLoader/HeartbeatLoader';
+import GlowLoader from '../GlowLoader/GlowLoader';
+import OrbitLoader from '../OrbitLoader/OrbitLoader';
 
 const FullScreenLoader = ({ 
   loaderType = 'circle',
@@ -37,6 +42,21 @@ const FullScreenLoader = ({
       break;
     case 'wave':
       Loader = WaveLoader;
+      break;
+    case 'bounce':
+      Loader = BounceLoader;
+      break;
+    case 'square':
+      Loader = SquareLoader;
+      break;
+    case 'heartbeat':
+      Loader = HeartbeatLoader;
+      break;
+    case 'glow':
+      Loader = GlowLoader;
+      break;
+    case 'orbit':
+      Loader = OrbitLoader;
       break;
     default:
       Loader = CircleLoader;

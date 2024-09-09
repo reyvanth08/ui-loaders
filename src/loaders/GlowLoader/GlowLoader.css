@@ -1,0 +1,68 @@
+.glow-loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-circle {
+  width: 70%;
+  height: 70%;
+  border-radius: 50%;
+  background-color: var(--main-color);
+  animation: glow-pulse 3s ease-in-out infinite;
+}
+
+@keyframes glow-pulse {
+  0%, 100% {
+    box-shadow: 
+      0 0 5px var(--main-color),
+      0 0 10px var(--main-color),
+      0 0 20px var(--main-color),
+      0 0 30px var(--main-color),
+      0 0 40px var(--main-color);
+    transform: scale(1);
+  }
+  50% {
+    box-shadow: 
+      0 0 10px var(--main-color),
+      0 0 20px var(--main-color),
+      0 0 30px var(--main-color),
+      0 0 40px var(--main-color),
+      0 0 50px var(--main-color),
+      0 0 60px #ff00de,
+      0 0 70px #00ffff;
+    transform: scale(1.1);
+  }
+}
+
+.glow-circle::before,
+.glow-circle::after {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  border-radius: 50%;
+  animation: glow-rotate 3s linear infinite;
+}
+
+.glow-circle::before {
+  background: linear-gradient(45deg, transparent, transparent 40%, #ff00de);
+  z-index: -2;
+}
+
+.glow-circle::after {
+  background: linear-gradient(45deg, transparent, transparent 40%, #00ffff);
+  z-index: -1;
+  animation-delay: -1.5s;
+}
+
+@keyframes glow-rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
